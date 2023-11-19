@@ -1,0 +1,1 @@
+loot = [{k:"coins",v:10},{k:"bow",v:1},{k:"arrow",v:5}];
