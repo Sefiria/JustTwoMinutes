@@ -15,3 +15,6 @@ else
 		global.inventory[$ "coins"] = 0;
 }
 
+draw_ui_init();
+
+global.hold_control = 0;

@@ -25,3 +25,47 @@ function particles_create(_count = 10, _direction = 80)
 		part_particles_create(part_sys, x, y, light, 1);
 	}
 }
+
+function instances_get(_type)
+{
+	var _instances = [];
+	for (var i = 0; i < instance_number(_type); ++i;)
+	{
+		array_push(_instances, instance_find(_type, i));
+	}
+	return _instances;
+}
+
+function is_tags_near(_tags, _distance)
+{
+	var _assets = instances_get(obj_chest);
+	var _scope={distance:_distance};
+	function _func(_id){ var _p = asset_get_index("obj_bulle"); var _d = point_distance(_p.x, _p.y, _id.x, _id.y); return _d < distance; };
+	return array_any(_assets, method(_scope,_func));
+}
+function is_chest_near(_distance)
+{
+	return is_tags_near("chest", _distance);
+}
+
+function inventory_get_items(_item_type)
+{
+	var _items = [];
+	for(var i=0; i<ds_map_size(global.inventory); i++)
+	{
+		if(global.inventory[i].type == _item_type)
+			array_push(_items, global.inventory[i]);
+	}
+	return _items;
+}
+
+function draw_def(_color, _alpha)
+{
+	draw_set_color(_color);
+	draw_set_alpha(_alpha);
+}
+function draw_default()
+{
+	draw_set_color(c_white);
+	draw_set_alpha(1);
+}

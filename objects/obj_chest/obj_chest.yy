@@ -34,6 +34,7 @@
   "physicsStartAwake": true,
   "properties": [
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"loot","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":6,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"__CHEST__","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":0,},
   ],
   "solid": false,
   "spriteId": {
@@ -41,8 +42,5 @@
     "path": "sprites/spr_white_chest_close/spr_white_chest_close.yy",
   },
   "spriteMaskId": null,
-  "tags": [
-    "chest",
-  ],
   "visible": true,
 }

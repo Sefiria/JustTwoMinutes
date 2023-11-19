@@ -1,1 +1,4 @@
-loot = [{k:"coins",v:10},{k:"bow",v:1},{k:"arrow",v:5}];
+loot = [
+	{k:"bow",v:new Item(ITEM_TYPES.WEAPON, "bow", 1)},
+	{k:"arrow",v:new Item(ITEM_TYPES.MUNITION, "arrow", 5)}
+];

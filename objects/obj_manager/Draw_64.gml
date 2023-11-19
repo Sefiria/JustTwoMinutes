@@ -9,3 +9,5 @@ draw_set_font(fnt_hud);
 // Taken from the player
 // using obj_player.coins
 draw_text(1135, 15, "  " + string(global.inventory[$ "coins"]));
+
+draw_ui();

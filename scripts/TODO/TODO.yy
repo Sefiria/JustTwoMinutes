@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "script_temp",
+  "name": "TODO",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "_BULLE",
-    "path": "folders/_BULLE.yy",
+    "name": "Enemies",
+    "path": "folders/Objects/Game/Enemies.yy",
   },
 }
