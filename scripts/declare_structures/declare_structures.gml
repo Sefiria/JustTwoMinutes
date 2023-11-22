@@ -6,7 +6,7 @@ function Slot(_name, _index, _type = 0) constructor
 	index = _index;
 	w = sprite_get_width(spr_ui_slot);
 	h = sprite_get_height(spr_ui_slot);
-	content = NaN;// should be a keypairvalue {k:"",v:10}
+	content = undefined;// should be an Item
 	switch _type
 	{
 		case 0:
@@ -28,7 +28,7 @@ function Slot(_name, _index, _type = 0) constructor
 	
 	function is_mouse_over()
 	{
-		return point_in_rectangle(window_mouse_get_x(), window_mouse_get_y(), x, y, x+w, y+h);
+		return point_in_rectangle(window_mouse_get_x(), window_mouse_get_y(), x-w/2, y-h/2, x+w/2, y+h/2);
 	}
 }
 
@@ -51,11 +51,11 @@ function SlotContainer(_slots) constructor
 	{
 		for(var j=0;j<4;j++)
 			for(var i=0;i<4;i++)
-				if(objects[i+j*4].content == NaN)
+				if(objects[i+j*4].content == undefined)
 					return {i:i,j:j};
-		return NaN;
+		return undefined;
 	}
-	function slot_any_available() { return slot_get_available_i_j() != NaN; }
+	function slot_any_available() { return slot_get_available_i_j() != undefined; }
 	function slot_no_available() { return !slot_any_available; }
 	function slot_get(_index_i_j) { return objects[_index_i_j]; }
 	function slot_set_content(_content) { return objects[_index_i_j].content = _content; }// _content should be keypairvalue {k:"",v:10}

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "TODO",
+  "name": "declare_spr_bank",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

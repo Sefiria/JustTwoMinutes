@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "TODO",
+  "name": "maths_functions",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

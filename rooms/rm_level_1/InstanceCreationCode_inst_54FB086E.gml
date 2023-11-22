@@ -1,3 +1,3 @@
 loot = [
-	{k:"coins",v:new Item(ITEM_TYPES.WEAPON, "coins", 10)}
+	new Item(ITEM_TYPES.OTHER, "coins", 10)
 ];

@@ -1,5 +1,3 @@
-/// @DnDAction : YoYo Games.Rooms.Restart_Room
-/// @DnDVersion : 1
-/// @DnDHash : 13240197
-/// @DnDComment : Restart the level
+ds_map_clear(global.inventory);
+create_inv();
 room_restart();

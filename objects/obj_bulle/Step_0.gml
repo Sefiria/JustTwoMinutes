@@ -1,10 +1,10 @@
 function shot()
 {
-	if(global.inventory[$ "bow"] > 0 && global.inventory[$ "arrow"] > 0)
+	if(inv_has_all(["bow","arrow"]))
 	{
 		instance_create_layer(x, y, "Instances", obj_arrow, {owner:self, look : get_look(x, y, mouse_x, mouse_y)});
 		audio_play_sound(snd_bow_pull, 0, 0, 1, 0, 1);
-		global.inventory[$ "arrow"]--;
+		inv_decr("arrow");
 	}
 	else
 	{
@@ -17,7 +17,8 @@ if(attack_cooldown == 0)
 {
 	if(mouse_check_button(mb_left) and global.mb_left_r
 	&& !is_chest_near(68)
-	&& global.slots.no_over())
+	&& global.hotslots.no_over()
+	&& !global.hold_control)
 	{
 		sprite_index = spr_bulle_attack;
 		image_index = 0;
@@ -28,7 +29,7 @@ if(attack_cooldown == 0)
 else
 {
 	attack_cooldown--;
-	if(attack_cooldown == 1 && global.inventory[$ "bow"] >= 1 && global.inventory[$ "arrow"] > 0) 
+	if(attack_cooldown == 1 && inv_has_all(["bow","arrow"])) 
 		audio_play_sound(snd_bow_loading, 0, 0, 1, 0, 1);
 	if(attack_cooldown < 0) attack_cooldown = 0;
 }
